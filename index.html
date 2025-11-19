@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-        <title>Profil Saya : DenzzDM</title>
-        <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantin Faisal - SMA Negeri 1 Leces</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-        <div class="kartu-profil">
-        <img src="images.webp" alt="Foto profil saya">
-        <h1>Denis firmansah</h1>
-        <p>Siswa SMA yang tertarik dengan teknoligi dan desain. Selamat datang di website pertama saya</p>
-        <a href="https://www.instagram.com/denisfirmansah11?igsh=dWlpanRkemVya3h1">Kunjungi instagram saya</a>
-        <button id="sapaButton">Sapa Saya!</button>
-    </div>
-<script src="script.js"></script>
+    <header>
+        <h1>Kantin Faisal</h1>
+        <p>SMA Negeri 1 Leces</p>
+    </header>
+    <main>
+        <section>
+            <h2>Daftar Makanan</h2>
+            <table>
+                <tr><th>Nama Makanan</th><th>Harga (Rp)</th><th>Jumlah</th><th>Subtotal</th></tr>
+                <tr><td>Pecel</td><td>8000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Nasi Goreng</td><td>10000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Ayam Geprek</td><td>12000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Bakso</td><td>10000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Mie Ayam</td><td>9000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Roti Bakar</td><td>7000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Aneka Gorengan</td><td>2000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Daftar Minuman</h2>
+            <table>
+                <tr><th>Nama Minuman</th><th>Harga (Rp)</th><th>Jumlah</th><th>Subtotal</th></tr>
+                <tr><td>Es Teh</td><td>3000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Es Jeruk</td><td>4000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Milo</td><td>5000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Teh Hangat</td><td>3000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Josua</td><td>4000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Wedang Jahe</td><td>5000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+                <tr><td>Jeruk Hangat</td><td>4000</td><td><input type="number" min="0" value="0" onchange="hitungTotal()"></td><td class="subtotal">0</td></tr>
+            </table>
+         </section>
+         <div class="total">
+            <p><strong>Total Bayar: Rp <span id="totalBayar">0</span></strong></p>
+            <label>Uang Konsumen: Rp <input type="number" id="uangKonsumen" min="0" value="0" onchange="hitungKembalian()"></label>
+            <p><strong>Kembalian: Rp <span id="kembalian">0</span></strong></p>
+            <button onclick="resetForm()">Reset</button>
+         </div>
+    </main>
+
+<script src="js/script.js"></script>
 </body>
 </html>
   
